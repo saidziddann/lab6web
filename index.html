@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum DOM dan Event</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Soal 5: script ada di head DENGAN defer-->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 id="judul">Latihan DOM</h1>
+    <p id="pesan">Belum ada tindakan</p>
+    <button id="tombolAksi" type="button">Klik saya</button>
+
+    <!-- Mengubah gaya CSS -->
+    <p id="teksGaya">Teks ini akan berubah gayanya</p>
+    <button id="tombolGaya" type="button">Ubah Gaya CSS</button>
+
+    <br /><br />
+
+    <!-- Event input dan penghitung karakter -->
+    <label for="namaInput">Nama:</label>
+    <input type="text" id="namaInput" maxlength="40" />
+    <p>Jumlah karakter: <span id="jumlahKarakter">0</span></p>
+
+    <!-- Soal 1: To-Do List dengan tombol hapus  -->
+    <section>
+      <h2>Daftar Tugas</h2>
+      <label for="inputTugas">Tugas baru</label>
+      <input id="inputTugas" type="text" />
+      <button id="tambahTugas" type="button">Tambah</button>
+      <p id="pesanTugas" aria-live="polite"></p>
+      <ul id="daftarTugas">
+        <li>
+          <span>Mengerjakan Laporan</span>
+          <button type="button" class="btn-hapus">Hapus</button>
+        </li>
+        <li>
+          <span>Belajar JavaScript DOM</span>
+          <button type="button" class="btn-hapus">Hapus</button>
+        </li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- Soal 4: sembunyikan / tampilkan paragraf dengan class CSS -->
+    <h2>Eksperimen CSS Class</h2>
+    <p id="paragrafRahasia">
+      Ini adalah paragraf yang bisa disembunyikan dan ditampilkan dengan tombol
+      di bawah.
+    </p>
+    <button id="btnToggleParagraf" type="button">Sembunyikan</button>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project-Pendaftaran Workshop</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Pendaftaran Workshop</h2>
+
+      <!-- Tempat untuk memunculkan pesan sukses/error -->
+      <div id="pesanNotifikasi"></div>
+
+      <form id="formWorkshop">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap:</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama Anda"
+          />
+          <small class="error-text" id="errorNama"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="contoh@email.com"
+          />
+          <small class="error-text" id="errorEmail"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="sesi">Pilih Sesi:</label>
+          <select id="sesi" name="sesi">
+            <option value="">-- Pilih Sesi Workshop --</option>
+            <option value="pagi">Sesi Pagi (08:00 - 12:00)</option>
+            <option value="siang">Sesi Siang (13:00 - 17:00)</option>
+          </select>
+          <small class="error-text" id="errorSesi"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="alasan">Ringkasan / Alasan Mengikuti:</label>
+          <textarea
+            id="alasan"
+            name="alasan"
+            rows="4"
+            placeholder="Tuliskan alasan Anda..."
+          ></textarea>
+          <!-- Penghitung karakter -->
+          <small id="charCount">0/200 karakter</small>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" id="btnSubmit">Daftar Sekarang</button>
+          <button type="reset" id="btnReset" class="btn-reset">
+            Reset Form
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
